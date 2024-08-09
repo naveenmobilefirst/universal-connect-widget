@@ -29,7 +29,7 @@ const config = {
   // ResourcePrefix: 'local',
   ResourceVersion: '', // 'development'
   
-  AuthProvider: '', //supported: local, ucp, sophtron
+  AuthProvider: 'ucp', //supported: local, ucp, sophtron
   // fill the corresponding credentials if the auth provider is to be used
 
   LocalAuthEncryptionKey: '', // shared encryption key with caller to encrypt the auth phraze
@@ -49,6 +49,7 @@ const arr = Object.keys(config);
 for (let i = 0; i < arr.length; i++) {
   const key = arr[i];
   config[key] = processEnv[key.toUpperCase()] || config[key];
+  console.log(`config[${key}] = ${config[key]}-----------------`);
 }
 
 module.exports = config;

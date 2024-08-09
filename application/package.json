@@ -11,7 +11,7 @@
     "test": "react-app-rewired test --watchAll",
     "coverage": "npm test -- --verbose --coverage --watchAll",
     "test-clear": "npm test -- --clearCache",
-    "keys": "node -e 'console.log(`key: ${crypto.randomBytes(32).toString(\"hex\")}\n IV: ${crypto.randomBytes(16).toString(\"hex\")}`)'"
+    "keys": "node -e \"console.log('key: ' + crypto.randomBytes(32).toString('hex') + '\\nIV: ' + crypto.randomBytes(16).toString('hex'))\""
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.18.2",
